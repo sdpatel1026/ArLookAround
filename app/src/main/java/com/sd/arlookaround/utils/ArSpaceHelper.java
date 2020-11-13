@@ -96,4 +96,14 @@ class ArSpaceHelper {
 
     }
 
+
+    public static String getDistanceInStringFormat(int distance) {
+        String dist;
+        if (distance >= 1000)
+            dist = String.format("%.2f", (double) distance / 1000) + " km";
+        else
+            dist = distance + " mtr";
+        return dist;
+    }
+
 }
